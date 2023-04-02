@@ -27,3 +27,7 @@ docker run -d \
 ```
 
 All container you want to be accessible from Tailscale must use the specified docker network.
+
+## Closing Words
+
+Currently i use the code from this repository to evaluate the usage of Tailscale for my homelab.
