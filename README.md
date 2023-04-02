@@ -2,14 +2,11 @@
 
 Tailscale relay container for a simple containerized Tailscale node instance in relay mode and exit node. Optional you can use the container as Sidecar container to serve a single container in Tailscale or public with Funnel (see `./example`).
 
+## Tailscale Funnel Sidecar
+
+See `./example/funnel`.
+
 ## Tailscale Relay Node
-
-### Requirements
-
-- `--cap-add=NET_ADMIN`
-- Volume for persistent storage `/tailscale`
-
-## Usage
 
 Create a separate docker network to share with Tailscale:
 
