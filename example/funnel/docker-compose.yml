@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  tailscale-relay:
+    image: ghcr.io/niki-on-github/tailscale-relay:dev
+    container_name: tailscale-relay
+    restart: unless-stopped
+    cap_add:
+      - NET_ADMIN
+    environment:
+      AUTHKEY: "tskey-auth-k3Bjasdfsaf-asdfasdfasdfasdfasdfasdf"
+    volumes:
+      - "/tailscale"
+
+  webserver:
+    image: nginxdemos/hello
+    container_name: tailscale-webserver
+    restart: unless-stopped
+    network_mode: service:tailscale-relay
+    depends_on:
+      - "tailscale-relay"
