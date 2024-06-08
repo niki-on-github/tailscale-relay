@@ -1,5 +1,8 @@
 # Tailscale relay container
 
+> [!TIP]
+> If you use K8S, I recommend taking a look at [Tailscale Kubernetes operator](https://tailscale.com/kb/1236/kubernetes-operator).
+
 Tailscale relay container for a simple containerized Tailscale node instance in relay mode and exit node. Optional you can use the container as Sidecar container to serve a single container in Tailscale or public with Funnel (see `./example`).
 
 ## Tailscale Funnel Sidecar
